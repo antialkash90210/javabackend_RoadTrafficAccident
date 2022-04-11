@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: "jdbc:postgres://ec2-34-250-19-18.eu-west-1.compute.amazonaws.com:5432/dfc99t0fp1kmnt"
+    username: zstcgnjtwppeyk
+    password: f3f9be95f3b68bfc6dae4ae1877fa8a578efc2f030c71d673a48b835ce5a677c
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    user: zstcgnjtwppeyk
+    password: f3f9be95f3b68bfc6dae4ae1877fa8a578efc2f030c71d673a48b835ce5a677c
+    change-log: 'classpath:db-migrations/changelog.xml'
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+internal:
+  api:
+    key: ${KEY}
+    geocoder-url: ${GEOCODER_URL:"https://geocode-maps.yandex.ru/1.x/"}
+    driversandcars-url: ${DRIVERS_AND_CARS_SERVICE_URL}
